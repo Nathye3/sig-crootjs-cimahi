@@ -4,7 +4,7 @@
 
 Aplikasi web peta interaktif yang menampilkan simulasi rute perjalanan GoRide dari ULBI (Universitas Logistik dan Bisnis Internasional) menuju Cihanjuang, menggunakan data GeoJSON dan library **CrootJS**.
 
-🌐 **Live Demo:** [Buka di GitHub Pages](https://USERNAME.github.io/sig-crootjs-cimahi/)
+🌐 **Live Demo:** [Buka di GitHub Pages](https://nathye3.github.io/sig-crootjs-cimahi/)
 
 ---
 
@@ -50,8 +50,7 @@ HTML, CSS, dan JavaScript berada di file terpisah. JavaScript dimuat sebagai ES 
 ## 📁 Struktur File
 
 ```
-sig-crootjs-cimahi/
-├── index.html           # Halaman utama
+├── index.html           # Halaman utama (root GitHub Pages)
 ├── style.css            # Gaya antarmuka modern
 ├── app.js               # Logika aplikasi (ES Module)
 ├── rute-cimahi.geojson  # Data rute ULBI → Cihanjuang
@@ -71,9 +70,6 @@ Karena `app.js` menggunakan ES Modules dan `fetch()`, file **tidak dapat dibuka 
 
 ### Opsi 2: Python HTTP Server
 ```bash
-# Masuk ke direktori proyek
-cd sig-crootjs-cimahi
-
 # Python 3
 python -m http.server 8080
 
@@ -84,21 +80,14 @@ python -m http.server 8080
 
 ## 📖 Tutorial Deployment ke GitHub Pages
 
-### Langkah 1: Buat Repository GitHub Baru
+### Langkah 1: Pastikan Berkas Ada di Root Repository
 
-1. Buka [github.com](https://github.com) dan login ke akun Anda.
-2. Klik tombol **"New"** atau kunjungi [github.com/new](https://github.com/new).
-3. Isi formulir:
-   - **Repository name:** `sig-crootjs-cimahi`
-   - **Description:** Tugas SIG – Simulasi Rute GoRide Cimahi/Bandung
-   - Pilih **Public**
-   - **Jangan** centang "Initialize this repository with a README"
-4. Klik **"Create repository"**.
+Repository ini adalah `Nathye3/sig-crootjs-cimahi`. Pastikan `index.html`, `style.css`, `app.js`, dan `rute-cimahi.geojson` berada langsung di root repository, bukan di dalam subfolder.
 
 ### Langkah 2: Upload Semua File Proyek
 
 #### Cara A – Melalui GitHub Web (Termudah)
-1. Di halaman repository yang baru dibuat, klik **"uploading an existing file"**.
+1. Di halaman repository, klik **"Add file" → "Upload files"**.
 2. Seret dan lepas (drag-and-drop) semua file berikut ke area upload:
    - `index.html`
    - `style.css`
@@ -110,15 +99,12 @@ python -m http.server 8080
 
 #### Cara B – Melalui Git di Terminal
 ```bash
-# Inisialisasi git di folder proyek
-cd sig-crootjs-cimahi
-git init
+# Jalankan dari root repository
 git add .
 git commit -m "feat: upload aplikasi SIG GoRide"
 
-# Hubungkan ke repository GitHub (ganti USERNAME)
-git branch -M main
-git remote add origin https://github.com/USERNAME/sig-crootjs-cimahi.git
+# Hubungkan ke repository GitHub jika belum ada remote
+git remote add origin https://github.com/Nathye3/sig-crootjs-cimahi.git
 git push -u origin main
 ```
 
@@ -136,12 +122,11 @@ git push -u origin main
 
 - GitHub Pages membutuhkan **1–3 menit** untuk build pertama.
 - Segarkan halaman Settings → Pages hingga muncul pesan:
-  > ✅ Your site is live at `https://USERNAME.github.io/sig-crootjs-cimahi/`
+  > ✅ Your site is live at `https://nathye3.github.io/sig-crootjs-cimahi/`
 
 ### Langkah 5: Buka URL Website
 
-- Buka: `https://USERNAME.github.io/sig-crootjs-cimahi/`
-- Ganti `USERNAME` dengan nama akun GitHub Anda.
+- Buka: [https://nathye3.github.io/sig-crootjs-cimahi/](https://nathye3.github.io/sig-crootjs-cimahi/)
 
 ### Langkah 6: Verifikasi Aplikasi
 
